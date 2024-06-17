@@ -32,6 +32,12 @@ export default function Login() {
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
+          {/* for demo */}
+          <pre>
+            Demo Email : test@test.com
+            <br/>
+            Password : test123
+          </pre>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
