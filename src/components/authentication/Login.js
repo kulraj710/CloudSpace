@@ -27,6 +27,11 @@ export default function Login() {
     setLoading(false)
   }
 
+  function copyDemoDataToLogin(){
+    emailRef.current.value = "test@test.com"
+    passwordRef.current.value = "test123"
+  }
+
   return (
     <CenteredContainer>
       <Card>
@@ -37,6 +42,7 @@ export default function Login() {
             Demo Email : test@test.com
             <br/>
             Password : test123
+          <button style={{fontSize : '10px' }} onClick={copyDemoDataToLogin}>Copy to Login</button>
           </pre>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
