@@ -31,17 +31,6 @@ export default function Dashboard() {
     <>
       <Navbar />
       <Container fluid>
-        {/* Note to User, Remove Later */}
-        {showNotice ? <div style={styles}>
-          <h5>How to Use? <button onClick={hideNotice}>Hide This</button></h5>
-          <p>This is your Dashboard, click on Icons to the right to Upload new file to the drive or create new folder to organize your files.</p>
-          <p>TO-DO : 
-          <br/>
-          [feat] Preview option, currently user has to rely on browser to view their file. Implement preview for files just like available in Google Drive.</p>
-          <p>
-            [feat] Display Metadata
-          </p> 
-        </div> : null }
         <div className="d-flex align-items-center">
           <FolderBreadcrumbs currentFolder={folder} />
           <AddFileButton currentFolder={folder} />
@@ -74,6 +63,17 @@ export default function Dashboard() {
             ))}
           </div>
         )}
+         {/* Note to User, Remove Later */}
+         {showNotice ? <div style={styles}>
+          <h5>How to Use? <button onClick={hideNotice}>Hide This</button></h5>
+          <p>This is your Dashboard, click on Icons to the right to Upload new file to the drive or create new folder to organize your files.</p>
+          <p>TO-DO : 
+          <br/>
+          [feat] Preview option, currently user has to rely on browser to view their file. Implement preview for files just like available in Google Drive.</p>
+          <p>
+            [feat] Display Metadata
+          </p> 
+        </div> : null }
       </Container>
     </>
   )
